@@ -10,3 +10,5 @@ export const saveConfig = (
   result
 ) => fs.writeFileSync(path, result, 'utf8')
 
+export const checkDir = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir)
+

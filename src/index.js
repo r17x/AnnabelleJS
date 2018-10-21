@@ -1,5 +1,5 @@
 import yargs from 'yargs'
-import {readConfig, saveConfig, Generate} from './utils'
+import {checkDir, readConfig, saveConfig, Generate} from './utils'
 
 /**
  * Option List:
@@ -18,6 +18,8 @@ let {config} = yargs
 
 
 config = readConfig(config)
+
+checkDir(config.output)
 
 const result = new Generate(config)
 
