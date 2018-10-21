@@ -1,8 +1,13 @@
 {
-    "name": "annabela",
+    "name": "annabelle",
     "version": "1.0.0",
     "main": "./dist/index.js",
-    "author": "ri7nz <ri7nz.labs@gmail.com>",
+    "bin": "./dist/bin/create-index.js",
+    "author": {
+        "email": "ri7nz.labs@gmail.com",
+        "name": "ri7nz",
+        "url": "http://rin.rocks"
+    },
     "license": "MIT",
     "private": false,
     "devDependencies": {
@@ -17,9 +22,18 @@
         "jest": "^23.6.0",
         "yargs": "^12.0.2"
     },
+    "keywords": [
+        "index",
+        "import",
+        "export",
+        "boilerplate",
+        "services",
+        "api",
+        "react"
+    ],
     "scripts": {
-        "build": "yarn clean && cross-env NODE_ENV=production babel src --out-dir dist --ignore __tests__",
-        "lint": "cross-env NODE_ENV=development eslint ./src ",
+        "build": "yarn clean && cross-env NODE_ENV=production babel src --out-dir dist --ignore tests",
+        "lint": "cross-env NODE_ENV=development eslint ./src --fix",
         "clean": "rm -rf dist",
         "prepublish": "yarn clean && yarn test && yarn build",
         "test": "jest",
