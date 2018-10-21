@@ -2,7 +2,7 @@
     "name": "annabelle",
     "version": "1.0.0",
     "main": "./dist/index.js",
-    "bin": "./dist/bin/create-index.js",
+    "bin": "./dist/bin/annabelle.js",
     "author": {
         "email": "ri7nz.labs@gmail.com",
         "name": "ri7nz",
