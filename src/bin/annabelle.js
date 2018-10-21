@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import yargs from 'yargs'
-import {checkDir, readConfig, saveConfig, Generate} from './utils'
+import {checkDir, readConfig, saveConfig, Generate} from '../utils'
 
 let {config} = yargs
   .options('config', {
