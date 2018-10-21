@@ -8,7 +8,8 @@ let {config} = yargs
     alias: 'c',
     type: 'string',
   })
-  .example('anabelle --endpoint https://api.domain/v1/post --name Post --method  get')
+  .example('anabelle -c config.json')
+  .example('anabelle --config config.json')
   .argv
 
 config = readConfig(config)
