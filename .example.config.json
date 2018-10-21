@@ -1,0 +1,11 @@
+{
+    "name": "Profile",
+    "endpoints": [
+        "GET /banner/banner",
+        "POST /banner/banner",
+        "GET /banner/banner/{bannerId}",
+        "POST /banner/banner/{bannerId}",
+        "DELETE /banner/banner/{bannerId}"
+    ],
+    "output": "./Services"
+}

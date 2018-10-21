@@ -1,0 +1,29 @@
+{
+    "name": "annabela",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "author": "ri7nz <ri7nz.labs@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.1",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2017": "^6.24.1",
+        "cross-env": "^5.2.0",
+        "eslint": "^5.7.0",
+        "eslint-config-google": "^0.11.0",
+        "jest": "^23.6.0",
+        "minimist": "^1.2.0",
+        "yargs": "^12.0.2"
+    },
+    "scripts": {
+        "build": "yarn clean && cross-env NODE_ENV=production babel src --out-dir dist --ignore __tests__",
+        "lint": "cross-env NODE_ENV=development eslint ./src ",
+        "clean": "rm -rf dist",
+        "prepublish": "yarn clean && yarn test && yarn build",
+        "test": "jest",
+        "test-watch": "jest --watch"
+    }
+}
